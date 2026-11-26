@@ -1,0 +1,20 @@
+<!-- Minimal, privacy-respecting AndroidManifest declarations for LINGUA FLOW -->
+<!-- Strictly NO AccessibilityService, NO Contacts, NO Location, NO Read-All-Media -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application>
+        <service
+            android:name="com.linguaflow.app.bridge.FloatingSubtitleService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="microphone|mediaProjection" />
+    </application>
+</manifest>

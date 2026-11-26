@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="lf-grad" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2E5BFF"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#lf-grad)"/>
+  <!-- Soundwave flowing into balanced subtitle bars -->
+  <path d="M18 24V30M25 18V34M32 14V36M39 20V32M46 25V29" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round"/>
+  <rect x="15" y="41" width="34" height="4.2" rx="2.1" fill="#FFFFFF"/>
+  <rect x="21" y="48.5" width="22" height="3.6" rx="1.8" fill="#FFFFFF" fill-opacity="0.78"/>
+</svg>
