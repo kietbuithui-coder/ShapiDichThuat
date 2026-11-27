@@ -777,7 +777,7 @@ export const VideoPlayerView: React.FC = () => {
       ctx.fillStyle = 'rgba(255,255,255,0.92)';
       ctx.font = 'bold 18px sans-serif';
       ctx.textAlign = 'center';
-      ctx.fillText(currentQaDef?.badgeLabel ?? 'LINGUA FLOW Video', w / 2, h * 0.43);
+      ctx.fillText(currentQaDef?.badgeLabel ?? 'SHAPI FLOW Video', w / 2, h * 0.43);
 
       ctx.fillStyle = 'rgba(226,232,240,0.72)';
       ctx.font = '13px monospace';
@@ -1281,7 +1281,7 @@ export const VideoPlayerView: React.FC = () => {
         translatedText:
           liveOverlayCue?.translatedText ??
           activeSyncedSegment?.translatedText ??
-          'Phụ đề nổi LINGUA FLOW sẵn sàng!',
+          'Phụ đề nổi SHAPI FLOW sẵn sàng!',
         isPartial: liveOverlayCue?.isPartial,
         statusLabel: liveAudioActive ? 'Đang dịch Video/Web' : 'Phụ đề nổi',
         isRunning: liveAudioActive,

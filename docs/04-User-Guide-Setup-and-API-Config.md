@@ -1,4 +1,4 @@
-# LINGUA FLOW — Hướng dẫn Cài đặt, Cấu hình API, Đóng gói & Danh sách Giới hạn
+# SHAPI FLOW — Hướng dẫn Cài đặt, Cấu hình API, Đóng gói & Danh sách Giới hạn
 
 ## 1. Yêu cầu môi trường
 - **Node.js:** `>= 20.x` (khuyến nghị `22.x`)
@@ -70,7 +70,7 @@ Mã nguồn module Native chuyên biệt nằm tại:
 |---|---|---|---|
 | `RECORD_AUDIO` / Microphone | Android, iOS, Web | Chỉ khi bấm *Bắt đầu nghe* bằng Micro | Thu âm lời nói trực tiếp; nếu từ chối, người dùng vẫn dịch được Video có phụ đề hoặc nhập tệp `.SRT/.VTT/.ASS` |
 | `MediaProjection` / Chia sẻ tab | Android 10+, Desktop Web | Chỉ khi chọn nguồn *Âm thanh ứng dụng / Tab* | Nhận âm thanh livestream được phép chia sẻ; nếu bị chặn hoặc từ chối, gợi ý chuyển sang Micro |
-| `SYSTEM_ALERT_WINDOW` | Android | Chỉ khi bật *Phụ đề nổi trên ứng dụng khác* | Hiển thị khung phụ đề kéo thả bên ngoài ứng dụng; nếu từ chối, hiển thị phụ đề ngay trong LINGUA FLOW |
+| `SYSTEM_ALERT_WINDOW` | Android | Chỉ khi bật *Phụ đề nổi trên ứng dụng khác* | Hiển thị khung phụ đề kéo thả bên ngoài ứng dụng; nếu từ chối, hiển thị phụ đề ngay trong SHAPI FLOW |
 | Bộ chọn tệp (`File Picker` / `PHPicker`) | Android, iOS, Web | Khi chọn *Nhập video* hoặc *Nhập phụ đề* | Chỉ đọc đúng 1 tệp người dùng chọn, **không** yêu cầu quyền đọc toàn bộ thư viện ảnh/tệp |
 
 ---
@@ -88,6 +88,6 @@ Mã nguồn module Native chuyên biệt nằm tại:
 - Tra cứu từ vựng CJK theo chạm (Romaja, Furigana, Pinyin, Hán-Việt), Câu đã lưu, Lịch sử tìm kiếm, Light/Dark Mode, Trợ năng phóng chữ & Reduce Motion.
 
 ### Giới hạn hệ điều hành & Phần cần kiểm chứng thêm trên thiết bị vật lý
-1. **Nội dung có DRM (Netflix, Disney+, v.v.):** Hệ điều hành chặn thu âm/ghi hình theo luật bản quyền; LINGUA FLOW không vượt rào DRM và chỉ hỗ trợ nghe ngoài qua Micro nếu hợp lệ.
+1. **Nội dung có DRM (Netflix, Disney+, v.v.):** Hệ điều hành chặn thu âm/ghi hình theo luật bản quyền; SHAPI FLOW không vượt rào DRM và chỉ hỗ trợ nghe ngoài qua Micro nếu hợp lệ.
 2. **Phụ đề nổi toàn hệ thống trên iOS:** Không khả dụng do giới hạn iOS Sandbox; sử dụng Trình phát nội bộ, Share Sheet và Picture-in-Picture thay thế.
 3. **Module Kotlin/Swift Native (`native/android`, `native/ios`):** Đã viết đầy đủ mã nguồn bridge chuẩn Capacitor, cần biên dịch bằng Android Studio / Xcode và kiểm chứng thêm trên đa dạng ROM tùy biến (Xiaomi MIUI/HyperOS, Samsung OneUI, OPPO ColorOS) đối với chính sách tiết kiệm pin chạy nền dài hạn.

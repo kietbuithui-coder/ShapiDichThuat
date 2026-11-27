@@ -33,7 +33,7 @@ export const BrandLogo: React.FC<{ size?: number; showWordmark?: boolean }> = ({
       {showWordmark && (
         <div className="flex flex-col leading-none">
           <span className="text-[15px] font-bold tracking-tight text-[var(--text-primary)]">
-            LINGUA FLOW
+            SHAPI FLOW
           </span>
           <span className="text-[11px] font-medium text-[var(--text-secondary)] mt-0.5">
             Phụ đề AI trực tiếp

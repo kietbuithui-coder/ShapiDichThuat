@@ -193,7 +193,7 @@ export const storageEngine = {
     return JSON.stringify(
       {
         exportedAt: new Date().toISOString(),
-        app: 'LINGUA FLOW',
+        app: 'SHAPI FLOW',
         schemaVersion: CURRENT_SCHEMA_VERSION,
         settings: this.loadSettings(),
         customPresets: safeReadJson(STORAGE_KEYS.CUSTOM_PRESETS, []),

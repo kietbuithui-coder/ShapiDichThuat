@@ -1104,7 +1104,7 @@ export const LiveTranslationView: React.FC<{
         }
         description={
           permissionNoticeSource === 'microphone'
-            ? 'LINGUA FLOW cần quyền Micro để nghe và dịch lời nói trực tiếp sang tiếng Việt. Ứng dụng không lưu bản ghi âm cuộc trò chuyện và ngắt Micro ngay khi bạn kết thúc phiên.'
+            ? 'SHAPI FLOW cần quyền Micro để nghe và dịch lời nói trực tiếp sang tiếng Việt. Ứng dụng không lưu bản ghi âm cuộc trò chuyện và ngắt Micro ngay khi bạn kết thúc phiên.'
             : 'Trình duyệt sẽ hỏi quyền chia sẻ tab đang phát livestream. Hãy tích chọn "Chia sẻ âm thanh tab" để hệ thống nhận diện lời nói.'
         }
         confirmLabel="Đồng ý & Bắt đầu"

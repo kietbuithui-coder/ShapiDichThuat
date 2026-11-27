@@ -27,7 +27,7 @@ export const HomeView: React.FC<{ onLaunchLiveMode: (mode: 'livestream' | 'micro
   return (
     <div className="home-layout">
       <header className="home-top"><BrandLogo size={36} /><button type="button" className="home-bubble" onClick={() => { setFloatingBubbleVisible(true); setFloatingBubbleExpanded(true); }}><Layers size={16} /> Bong bóng</button></header>
-      <div className="home-heading"><div><span className="home-eyebrow">CHÀO MỪNG ĐẾN LINGUA FLOW</span><h1>Hiểu thêm một thế giới.</h1><p>Dịch video và cuộc trò chuyện sang tiếng Việt.</p></div>{liveRunningIndicator.isRunning && <button className="home-live" onClick={() => setActiveTab('live')}>● Đang dịch</button>}</div>
+      <div className="home-heading"><div><span className="home-eyebrow">CHÀO MỪNG ĐẾN SHAPI FLOW</span><h1>Hiểu thêm một thế giới.</h1><p>Dịch video và cuộc trò chuyện sang tiếng Việt.</p></div>{liveRunningIndicator.isRunning && <button className="home-live" onClick={() => setActiveTab('live')}>● Đang dịch</button>}</div>
       <div className="home-columns"><div className="home-main">
         <section className="home-hero" aria-label="Mở video">
           <div className="hero-icon"><Film size={22} /></div><span className="hero-kicker">XEM & HIỂU</span>

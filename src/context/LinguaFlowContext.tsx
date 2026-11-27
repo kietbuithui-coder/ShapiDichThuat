@@ -266,7 +266,7 @@ export const LinguaFlowProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     []
   );
 
-  // Auto-open ?video=<url> query param if user opened LINGUA FLOW in a standalone tab
+  // Auto-open ?video=<url> query param if user opened SHAPI FLOW in a standalone tab
   useEffect(() => {
     if (typeof window === 'undefined') return;
     try {
