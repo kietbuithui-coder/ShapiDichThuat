@@ -1441,7 +1441,7 @@ export const VideoPlayerView: React.FC = () => {
 
       {/* Always-Visible Link Opener + Local File + Subtitle Picker */}
       {!focusMode && (
-        <section className="rounded-3xl lf-surface p-4 space-y-3">
+        <section className="video-opener rounded-3xl lf-surface p-4 space-y-3">
           <form onSubmit={handleLoadUrlForm} className="flex flex-col sm:flex-row gap-2">
             <div className="relative flex-1">
               <Link2 className="w-4 h-4 text-[var(--accent-primary)] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
@@ -1471,6 +1471,8 @@ export const VideoPlayerView: React.FC = () => {
             </button>
           </form>
 
+          <details className="video-more">
+          <summary>Thêm lựa chọn</summary>
           {/* Sample YouTube / Web Links + Built-in QA Video Streams */}
           <div className="flex gap-1.5 overflow-x-auto no-scrollbar pb-0.5">
             {SAMPLE_WEB_VIDEO_LINKS.map((sample) => (
@@ -1528,6 +1530,7 @@ export const VideoPlayerView: React.FC = () => {
               <span>Đính kèm tệp SRT/VTT/ASS</span>
             </button>
           </div>
+          </details>
         </section>
       )}
 

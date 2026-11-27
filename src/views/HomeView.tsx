@@ -43,7 +43,7 @@ export const HomeView: React.FC<{ onLaunchLiveMode: (mode: 'livestream' | 'micro
             <button className="mode-card" onClick={() => onLaunchLiveMode('microphone')}><span className="mode-icon blue"><Mic size={20}/></span><span><strong>Micro</strong><small>Nghe và dịch giọng nói</small></span><ArrowRight size={17}/></button>
           </div>
         </section>
-      </div><aside className="home-aside">
+      </div><details className="home-more"><summary>Tiện ích & lịch sử <span aria-hidden="true">⌄</span></summary><aside className="home-aside">
         <section className="aside-card"><span className="home-eyebrow">CÔNG CỤ</span><h2>Tiện ích của bạn</h2>
           <button onClick={() => setSubtitleFileModalOpen(true)}><span className="aside-icon"><FileText size={17}/></span><span><strong>Dịch tệp phụ đề</strong><small>SRT, VTT và nhiều hơn</small></span><ArrowRight size={15}/></button>
           <button onClick={() => setQuickTranslateOpen(true)}><span className="aside-icon"><Languages size={17}/></span><span><strong>Dịch nhanh</strong><small>Dịch một câu</small></span><ArrowRight size={15}/></button>
@@ -52,7 +52,7 @@ export const HomeView: React.FC<{ onLaunchLiveMode: (mode: 'livestream' | 'micro
         <section className="aside-card history-card"><div className="history-heading"><div><span className="home-eyebrow">TIẾP TỤC</span><h2>Gần đây</h2></div><button className="history-all" onClick={() => setActiveTab('library')}>Xem tất cả</button></div>
           {sessions.length === 0 ? <p className="empty-history"><Clock size={16}/> Phiên đã lưu sẽ xuất hiện ở đây.</p> : sessions.slice(0,3).map(s => <button key={s.id} onClick={() => {setInspectingSessionId(s.id); setActiveTab('library');}}><span className="aside-icon"><Clock size={17}/></span><span><strong>{s.title}</strong><small>{s.transcriptSegments.length} câu</small></span><ArrowRight size={15}/></button>)}
         </section>
-      </aside></div>
+      </aside></details></div>
     </div>
   );
 };
