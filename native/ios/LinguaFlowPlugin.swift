@@ -4,7 +4,7 @@ import AVKit
 import Capacitor
 
 /**
- * Native iOS Bridge for LINGUA FLOW (iOS 16+)
+ * Native iOS Bridge for SHAPI FLOW (iOS 16+)
  * Respects iOS App Sandbox honestly:
  * - Does NOT claim system-wide arbitrary overlay drawing over third-party apps.
  * - Provides AVPictureInPictureController capability check, low-latency AVAudioSession microphone config,

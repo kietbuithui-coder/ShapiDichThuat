@@ -1,6 +1,6 @@
-# LINGUA FLOW — Dịch thuật Video, Livestream & Phụ đề AI trên Điện thoại
+# SHAPI FLOW — Dịch thuật Video, Livestream & Phụ đề AI trên Điện thoại
 
-**LINGUA FLOW** là ứng dụng dịch thuật nội dung nghe nhìn theo thời gian thực (**Tiếng Hàn, Tiếng Nhật, Tiếng Trung Giản thể & Phồn thể → Tiếng Việt**), tập trung vào trải nghiệm xem livestream, video, hội thoại trực tiếp và tùy biến phụ đề chuyên sâu.
+**SHAPI FLOW** là ứng dụng dịch thuật nội dung nghe nhìn theo thời gian thực (**Tiếng Hàn, Tiếng Nhật, Tiếng Trung Giản thể & Phồn thể → Tiếng Việt**), tập trung vào trải nghiệm xem livestream, video, hội thoại trực tiếp và tùy biến phụ đề chuyên sâu.
 
 ---
 

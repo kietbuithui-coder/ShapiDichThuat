@@ -54,7 +54,7 @@ class FloatingSubtitleService : Service() {
             ACTION_START_OVERLAY -> {
                 val fontSize = intent.getIntExtra("fontSize", 20)
                 val opacity = intent.getFloatExtra("backgroundOpacity", 0.78f)
-                promoteToForeground("Đang hiển thị phụ đề nổi LINGUA FLOW")
+                promoteToForeground("Đang hiển thị phụ đề nổi SHAPI FLOW")
                 ensureOverlayView(fontSize, opacity)
             }
             ACTION_UPDATE_TEXT -> {
@@ -110,7 +110,7 @@ class FloatingSubtitleService : Service() {
         }
 
         val viTv = TextView(this).apply {
-            text = "LINGUA FLOW sẵn sàng hiển thị phụ đề…"
+            text = "SHAPI FLOW sẵn sàng hiển thị phụ đề…"
             textSize = fontSizeSp.toFloat()
             setTextColor(Color.WHITE)
         }
@@ -188,7 +188,7 @@ class FloatingSubtitleService : Service() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val ch = NotificationChannel(
                 CHANNEL_ID,
-                "Phiên dịch trực tiếp LINGUA FLOW",
+                "Phiên dịch trực tiếp SHAPI FLOW",
                 NotificationManager.IMPORTANCE_LOW
             )
             nm.createNotificationChannel(ch)
@@ -217,7 +217,7 @@ class FloatingSubtitleService : Service() {
         }
 
         val notification = builder
-            .setContentTitle("LINGUA FLOW")
+            .setContentTitle("SHAPI FLOW")
             .setContentText(statusText)
             .setSmallIcon(android.R.drawable.ic_btn_speak_now)
             .setOngoing(true)

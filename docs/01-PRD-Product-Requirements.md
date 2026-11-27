@@ -1,4 +1,4 @@
-# LINGUA FLOW — Product Requirements Document (PRD)
+# SHAPI FLOW — Product Requirements Document (PRD)
 
 **Phiên bản:** 1.0.0  
 **Định vị sản phẩm:** Ứng dụng di động dịch thuật nội dung nghe nhìn (Video, Livestream, Âm thanh trực tiếp & Phụ đề) theo thời gian thực từ **Tiếng Hàn, Tiếng Nhật, Tiếng Trung (Giản thể & Phồn thể)** sang **Tiếng Việt**.
@@ -7,7 +7,7 @@
 
 ## 1. Tầm nhìn & Giá trị cốt lõi
 
-LINGUA FLOW giúp người dùng Việt Nam hiểu ngay nội dung tiếng Hàn, tiếng Nhật và tiếng Trung trong lúc đang xem livestream, video hoặc nghe hội thoại trực tiếp mà không phải chụp màn hình, sao chép từng câu sang công cụ dịch rời rạc.
+SHAPI FLOW giúp người dùng Việt Nam hiểu ngay nội dung tiếng Hàn, tiếng Nhật và tiếng Trung trong lúc đang xem livestream, video hoặc nghe hội thoại trực tiếp mà không phải chụp màn hình, sao chép từng câu sang công cụ dịch rời rạc.
 
 ### Năm giá trị cốt lõi
 1. **Dịch nhanh:** Pipeline bất đồng bộ theo từng đoạn (streaming/chunked recognition + incremental translation) giảm độ trễ cảm nhận và phân biệt trực quan giữa *phụ đề tạm thời* và *phụ đề đã xác nhận*.
@@ -20,7 +20,7 @@ LINGUA FLOW giúp người dùng Việt Nam hiểu ngay nội dung tiếng Hàn,
 
 ## 2. Nhóm người dùng mục tiêu
 
-| Nhóm người dùng | Nhu cầu trọng tâm | Giải pháp trong LINGUA FLOW |
+| Nhóm người dùng | Nhu cầu trọng tâm | Giải pháp trong SHAPI FLOW |
 |---|---|---|
 | **1. Người xem livestream nước ngoài** (Ưu tiên số 1) | Hiểu nhanh lời nói streamer/idol Hàn, Nhật, Trung; ít thao tác; không che khuất hình ảnh | Chế độ Livestream thời gian thực, phụ đề Live gọn nhẹ, Bảng điều khiển nhanh (`Aa`), Phụ đề nổi Android (`WindowManager`) hoặc chế độ Micro dự phòng |
 | **2. Người xem video** | Xem video tải về, video chia sẻ, chương trình thực tế với phụ đề đồng bộ thời gian | Trình phát video tích hợp, tự đồng bộ theo `currentTime`, chỉnh độ trễ thủ công (`±5.0s`), tốc độ `0.5x–2.0x`, PiP, chế độ Tập trung |

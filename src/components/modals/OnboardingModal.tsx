@@ -31,7 +31,7 @@ export const OnboardingModal: React.FC = () => {
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="Giới thiệu LINGUA FLOW"
+        aria-label="Giới thiệu SHAPI FLOW"
         className="w-full max-w-md rounded-3xl lf-surface p-6 shadow-2xl space-y-5"
       >
         <div className="flex items-center justify-between">
@@ -165,7 +165,7 @@ export const OnboardingModal: React.FC = () => {
                   : 'Trình duyệt Web'}
               </div>
               <p className="leading-relaxed">
-                LINGUA FLOW chỉ xin quyền Micro hoặc Chia sẻ âm thanh đúng lúc bạn bật tính năng đó — không tự ý lưu bản ghi âm cuộc trò chuyện.
+                SHAPI FLOW chỉ xin quyền Micro hoặc Chia sẻ âm thanh đúng lúc bạn bật tính năng đó — không tự ý lưu bản ghi âm cuộc trò chuyện.
               </p>
             </div>
           </div>

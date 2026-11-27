@@ -1,4 +1,4 @@
-# LINGUA FLOW — Kiến trúc Kỹ thuật & Phân tích Giới hạn Hệ điều hành
+# SHAPI FLOW — Kiến trúc Kỹ thuật & Phân tích Giới hạn Hệ điều hành
 
 ## 1. Đánh giá và lựa chọn công nghệ
 
@@ -22,7 +22,7 @@ Sau khi đối chiếu yêu cầu về hiệu năng render phụ đề 60fps, th
 ### 2.1. Android
 - **Thu âm thanh từ ứng dụng khác (`AudioPlaybackCapture` — Android 10 / API 29+):**
   - *Khả thi khi:* Người dùng chấp nhận hộp thoại `MediaProjection` VÀ ứng dụng phát sử dụng `USAGE_MEDIA` / `USAGE_GAME` đồng thời không đặt `android:allowAudioPlaybackCapture="false"`.
-  - *Giới hạn:* Các ứng dụng có DRM (Netflix, Disney+, một số nền tảng trả phí) hoặc ứng dụng chủ động chặn capture sẽ trả về luồng âm thanh im lặng. LINGUA FLOW **tuyệt đối không vượt rào DRM** và **không lạm dụng AccessibilityService**. Khi phát hiện luồng âm thanh bị chặn (RMS = 0 liên tục sau 3.5 giây), ứng dụng thông báo rõ nguyên nhân và đề xuất chuyển sang **Nghe bằng Micro**.
+  - *Giới hạn:* Các ứng dụng có DRM (Netflix, Disney+, một số nền tảng trả phí) hoặc ứng dụng chủ động chặn capture sẽ trả về luồng âm thanh im lặng. SHAPI FLOW **tuyệt đối không vượt rào DRM** và **không lạm dụng AccessibilityService**. Khi phát hiện luồng âm thanh bị chặn (RMS = 0 liên tục sau 3.5 giây), ứng dụng thông báo rõ nguyên nhân và đề xuất chuyển sang **Nghe bằng Micro**.
 - **Phụ đề nổi (`SYSTEM_ALERT_WINDOW`):**
   - Chỉ yêu cầu quyền khi người dùng chủ động bật "Phụ đề nổi trên ứng dụng khác", kèm màn hình giải thích ngắn gọn trước khi mở cài đặt hệ thống. Tôn trọng `WindowInsets` (tai thỏ, camera đục lỗ, thanh điều hướng cử chỉ).
 
@@ -31,9 +31,9 @@ Sau khi đối chiếu yêu cầu về hiệu năng render phụ đề 60fps, th
   - iOS **không cho phép** ứng dụng bên thứ ba tự vẽ cửa sổ overlay tùy ý đè lên mọi ứng dụng khác trên màn hình chính.
   - iOS **không cho phép** một ứng dụng thông thường thu luồng âm thanh phát nội bộ của mọi ứng dụng bên ngoài tùy ý.
 - **Giải pháp thực tế trên iOS:**
-  1. Dịch video trực tiếp trong **Trình phát tích hợp** của LINGUA FLOW (chọn tệp qua `PHPicker` / `UIDocumentPicker` mà không cần xin quyền toàn bộ thư viện ảnh).
+  1. Dịch video trực tiếp trong **Trình phát tích hợp** của SHAPI FLOW (chọn tệp qua `PHPicker` / `UIDocumentPicker` mà không cần xin quyền toàn bộ thư viện ảnh).
   2. Nhận liên kết video hợp lệ hoặc tệp video/phụ đề qua **iOS Share Sheet**.
-  3. Hỗ trợ **Picture-in-Picture (PiP)** đối với video đang phát hợp lệ trong trình phát LINGUA FLOW.
+  3. Hỗ trợ **Picture-in-Picture (PiP)** đối với video đang phát hợp lệ trong trình phát SHAPI FLOW.
   4. Chế độ **Nghe trực tiếp bằng Micro** khi xem livestream trên thiết bị thứ hai hoặc loa ngoài.
 
 ### 2.3. Trình duyệt / Mobile Web / PWA (Môi trường chạy trực tiếp)

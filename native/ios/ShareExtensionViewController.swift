@@ -4,7 +4,7 @@ import UniformTypeIdentifiers
 /**
  * iOS Share Extension Receiver
  * Allows users to share a video file (.mp4/.mov) or subtitle file (.srt/.vtt) directly from Safari/Files/Photos
- * into LINGUA FLOW without requesting full Photo Library access.
+ * into SHAPI FLOW without requesting full Photo Library access.
  */
 final class ShareExtensionViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {

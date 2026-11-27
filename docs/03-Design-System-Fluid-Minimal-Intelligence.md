@@ -1,4 +1,4 @@
-# LINGUA FLOW — Hệ thống Thiết kế "Fluid Minimal Intelligence"
+# SHAPI FLOW — Hệ thống Thiết kế "Fluid Minimal Intelligence"
 
 ## 1. Triết lý thẩm mỹ
 
@@ -42,7 +42,7 @@
 
 ## 4. Nhận diện thương hiệu & Hệ thống Icon
 
-- **Logo LINGUA FLOW:** Biểu trưng hình học kết hợp **ba làn sóng âm thanh hội tụ thành hai dòng phụ đề cân đối** trong khung bo góc mềm (`squircle`), biểu đạt dòng chảy chuyển ngữ thời gian thực mà không phụ thuộc vào hình lá cờ quốc gia — sẵn sàng mở rộng sang nhiều ngôn ngữ mới.
+- **Logo SHAPI FLOW:** Biểu trưng hình học kết hợp **ba làn sóng âm thanh hội tụ thành hai dòng phụ đề cân đối** trong khung bo góc mềm (`squircle`), biểu đạt dòng chảy chuyển ngữ thời gian thực mà không phụ thuộc vào hình lá cờ quốc gia — sẵn sàng mở rộng sang nhiều ngôn ngữ mới.
 - **Hệ Icon:** Đường nét đồng nhất `stroke-width: 1.85px`, đầu nét tròn (`round cap/join`), dễ nhận diện ngay ở kích thước `18px–24px`.
 
 ---

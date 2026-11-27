@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.linguaflow.app',
-  appName: 'LINGUA FLOW',
+  appName: 'SHAPI FLOW',
   webDir: 'dist',
   server: {
     androidScheme: 'https',

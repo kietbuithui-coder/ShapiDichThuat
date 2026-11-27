@@ -6,6 +6,7 @@ import {
   Radio,
   Settings,
   Sliders,
+  MoreHorizontal,
 } from 'lucide-react';
 import {
   LinguaFlowProvider,
@@ -23,6 +24,7 @@ import { QuickTranslateModal } from './components/modals/QuickTranslateModal';
 import { SubtitleFileModal } from './components/modals/SubtitleFileModal';
 import { WordLookupSheet } from './components/modals/WordLookupSheet';
 import { FloatingBubbleOverlay } from './components/floating/FloatingBubbleOverlay';
+import { BrandLogo } from './components/ui/BrandLogo';
 import { ToastViewport } from './components/ui/DesignSystem';
 
 const AppShell: React.FC = () => {
@@ -34,6 +36,7 @@ const AppShell: React.FC = () => {
     haptic,
   } = useLinguaFlow();
 
+  const [advancedOpen, setAdvancedOpen] = useState(false);
   const [requestedLiveMode, setRequestedLiveMode] = useState<'livestream' | 'microphone'>(
     'livestream'
   );
@@ -58,7 +61,7 @@ const AppShell: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[var(--bg-canvas)] text-[var(--text-primary)]">
+    <div className="app-background min-h-screen text-[var(--text-primary)]">
       <ToastViewport toasts={toasts} />
       <OnboardingModal />
       <QuickTranslateModal />
@@ -66,8 +69,16 @@ const AppShell: React.FC = () => {
       <WordLookupSheet />
       <FloatingBubbleOverlay />
 
-      {/* Centered Mobile-First Responsive Container (Portrait & Landscape Safe) */}
-      <main className="flex-1 w-full max-w-2xl mx-auto px-4 pt-safe pt-3 pb-24">
+      <div className="app-frame">
+      <aside className="desktop-sidebar" aria-label="Điều hướng chính">
+        <BrandLogo size={36} />
+        <div className="sidebar-label">KHÁM PHÁ</div>
+        {navItems.slice(0, 3).map(item => <button key={item.id} className={`sidebar-item ${activeTab === item.id ? 'selected' : ''}`} onClick={() => setActiveTab(item.id)} aria-current={activeTab === item.id ? 'page' : undefined}>{item.icon}<span>{item.label}</span>{item.badge && <span className="nav-live-dot" />}</button>)}
+        <div className="sidebar-label">NÂNG CAO</div>
+        {navItems.slice(3).map(item => <button key={item.id} className={`sidebar-item ${activeTab === item.id ? 'selected' : ''}`} onClick={() => setActiveTab(item.id)} aria-current={activeTab === item.id ? 'page' : undefined}>{item.icon}<span>{item.label}</span></button>)}
+        <p className="sidebar-note">Phụ đề cho những điều bạn yêu thích.</p>
+      </aside>
+      <main className="app-content w-full px-4 pt-safe pt-3 pb-24">
         {activeTab === 'home' && (
           <HomeView
             onLaunchLiveMode={(mode) => {
@@ -91,41 +102,12 @@ const AppShell: React.FC = () => {
         {activeTab === 'settings' && <SettingsView />}
       </main>
 
-      {/* One-Handed Ergonomic Bottom Navigation Bar */}
-      <nav
-        aria-label="Điều hướng chính"
-        className="fixed bottom-0 inset-x-0 z-40 bg-[var(--bg-surface)]/92 backdrop-blur-xl border-t border-[var(--border-subtle)] pb-safe"
-      >
-        <div className="max-w-2xl mx-auto px-2 py-1.5 grid grid-cols-6 gap-1">
-          {navItems.map((item) => {
-            const selected = activeTab === item.id;
-            return (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => {
-                  haptic(6);
-                  setActiveTab(item.id);
-                }}
-                aria-current={selected ? 'page' : undefined}
-                className={`relative min-h-[48px] rounded-2xl flex flex-col items-center justify-center gap-0.5 transition-colors cursor-pointer ${
-                  selected
-                    ? 'text-[var(--accent-primary)] font-bold bg-[var(--accent-primary-soft)]'
-                    : 'text-[var(--text-secondary)] font-medium hover:text-[var(--text-primary)]'
-                }`}
-              >
-                <div className="relative">
-                  {item.icon}
-                  {item.badge && (
-                    <span className="absolute -top-0.5 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-[var(--bg-surface)]" />
-                  )}
-                </div>
-                <span className="text-[10.5px] leading-tight truncate max-w-full px-1">
-                  {item.label}
-                </span>
-              </button>
-            );
-          })}
+      </div>
+      <nav aria-label="Điều hướng trên điện thoại" className="mobile-nav">
+        {advancedOpen && <div className="advanced-menu" id="advanced-menu"><div className="advanced-title">Nâng cao</div>{navItems.slice(3).map(item => <button key={item.id} onClick={() => { setActiveTab(item.id); setAdvancedOpen(false); }} aria-current={activeTab === item.id ? 'page' : undefined}>{item.icon}<span>{item.label}</span></button>)}</div>}
+        <div className="mobile-nav-items">
+          {navItems.slice(0, 3).map(item => <button key={item.id} onClick={() => { haptic(6); setActiveTab(item.id); setAdvancedOpen(false); }} aria-current={activeTab === item.id ? 'page' : undefined} className={activeTab === item.id ? 'selected' : ''}><span className="relative">{item.icon}{item.badge && <span className="nav-live-dot" />}</span><span>{item.label}</span></button>)}
+          <button onClick={() => setAdvancedOpen(v => !v)} aria-expanded={advancedOpen} aria-controls="advanced-menu" className={advancedOpen || ['studio', 'library', 'settings'].includes(activeTab) ? 'selected' : ''}><MoreHorizontal className="w-5 h-5"/><span>Nâng cao</span></button>
         </div>
       </nav>
     </div>

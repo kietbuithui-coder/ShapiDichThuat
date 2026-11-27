@@ -179,7 +179,7 @@ class SubtitlePipManager {
 
   private setupDocPipDom(pipWin: Window, payload: FloatingPipSubtitlePayload): void {
     const doc = pipWin.document;
-    doc.title = 'LINGUA FLOW — Phụ đề nổi';
+    doc.title = 'SHAPI FLOW — Phụ đề nổi';
     doc.body.innerHTML = `
       <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans SC', sans-serif; }
@@ -261,7 +261,7 @@ class SubtitlePipManager {
       <div class="topbar">
         <div class="status">
           <span id="lf-dot" class="dot"></span>
-          <span id="lf-status">LINGUA FLOW</span>
+          <span id="lf-status">SHAPI FLOW</span>
         </div>
         <div class="actions">
           <button id="btn-font-down" title="Giảm cỡ chữ">A-</button>
@@ -339,7 +339,7 @@ class SubtitlePipManager {
     ctx.fillStyle = '#CBD5E1';
     ctx.font = 'bold 17px sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText(`LINGUA FLOW · ${payload.statusLabel}`, 60, 41);
+    ctx.fillText(`SHAPI FLOW · ${payload.statusLabel}`, 60, 41);
 
     const centerX = canvas.width / 2;
     ctx.textAlign = 'center';
