@@ -16,8 +16,8 @@ export const BrandLogo: React.FC<{ size?: number; showWordmark?: boolean }> = ({
       >
         <defs>
           <linearGradient id="lfBrandGrad" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#2E5BFF" />
-            <stop offset="100%" stopColor="#0D9488" />
+            <stop offset="0%" stopColor="#7845D2" />
+            <stop offset="100%" stopColor="#D26AC6" />
           </linearGradient>
         </defs>
         <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#lfBrandGrad)" />

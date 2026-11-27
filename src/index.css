@@ -190,3 +190,49 @@ html.dark .app-background { background:radial-gradient(ellipse at 5% 0,#332348 0
   .video-opener form > button { padding-left:12px; padding-right:12px; }
   .video-opener form input { font-size:16px; }
 }
+
+/* Soft neon accents: motion is decorative, never placed over the subtitles. */
+.app-background {
+  background: radial-gradient(ellipse at 5% 10%, #ceb5f4 0, transparent 38%),
+    radial-gradient(ellipse at 95% 10%, #ffd8ef 0, transparent 38%), #eee8fa;
+}
+.app-frame { box-shadow: 0 25px 70px rgba(69,41,107,.18), 0 0 45px rgba(184,116,230,.13); }
+.home-hero {
+  isolation: isolate;
+  background: linear-gradient(120deg, #453171 0%, #7651ab 55%, #af62a5 100%);
+  box-shadow: 0 15px 35px rgba(91,53,144,.25), 0 0 24px rgba(167,103,220,.22);
+}
+.home-hero::before {
+  content: ''; position: absolute; z-index: -1; pointer-events: none;
+  width: 250px; height: 250px; right: 8%; top: -145px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,190,238,.42), transparent 68%);
+  animation: shapi-glow-drift 8s ease-in-out infinite alternate;
+}
+.home-hero::after { animation: shapi-orbit 12s ease-in-out infinite alternate; }
+.hero-icon { box-shadow: inset 0 0 0 1px rgba(255,255,255,.2), 0 0 18px rgba(238,167,255,.3); }
+.home-url { box-shadow: 0 5px 22px rgba(27,13,57,.2), 0 0 0 1px rgba(255,255,255,.35); }
+.home-url:focus-within { box-shadow: 0 0 0 3px #dbc1ff, 0 0 24px rgba(238,192,255,.55); }
+.open-button { background: linear-gradient(120deg,#7543c3,#a749b0); box-shadow: 0 4px 14px rgba(123,65,180,.25); transition: transform .2s ease, box-shadow .2s ease, filter .2s ease; }
+.open-button:hover { background: linear-gradient(120deg,#6837b4,#963c9e); box-shadow: 0 5px 18px rgba(121,63,181,.4); }
+.open-button:active { transform: scale(.97); }
+.mode-card, .home-bubble, .sidebar-item, .mobile-nav-items button, .aside-card button { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease, color .2s ease; }
+.mode-card:hover { border-color: rgba(151,93,211,.4); box-shadow: 0 10px 25px rgba(114,71,163,.14), 0 0 16px rgba(180,130,234,.14); }
+.mode-card:active, .home-bubble:active { transform: scale(.98); }
+.mode-icon { box-shadow: 0 0 15px rgba(157,107,219,.13); }
+.mode-icon.pink { box-shadow: 0 0 15px rgba(224,125,184,.15); }
+.mode-icon.blue { box-shadow: 0 0 15px rgba(114,153,231,.17); }
+.sidebar-item.selected, .mobile-nav-items button.selected { box-shadow: inset 0 0 0 1px rgba(143,91,205,.1), 0 0 14px rgba(156,107,217,.1); }
+.home-bubble { box-shadow: var(--shadow-card), 0 0 18px rgba(173,119,230,.15); }
+.advanced-menu { animation: shapi-enter .2s ease-out both; }
+:where(button, a, summary, input, select, textarea):focus-visible { outline: 3px solid #a45de1; outline-offset: 3px; }
+html.dark .app-background { background: radial-gradient(ellipse at 5% 0,#3b2757 0,transparent 45%), radial-gradient(ellipse at 95% 10%,#42263f 0,transparent 40%),#171421; }
+html.dark .app-frame { border-color: rgba(220,183,255,.12); box-shadow: 0 25px 70px rgba(0,0,0,.35), 0 0 38px rgba(159,80,228,.12); }
+@keyframes shapi-glow-drift { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(-28px,18px,0) scale(1.15); } }
+@keyframes shapi-orbit { from { transform: translate3d(0,0,0); } to { transform: translate3d(-16px,12px,0); } }
+@keyframes shapi-enter { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .home-hero::before, .home-hero::after, .advanced-menu { animation: none; }
+}
+html[data-reduce-motion="true"] .home-hero::before,
+html[data-reduce-motion="true"] .home-hero::after,
+html[data-reduce-motion="true"] .advanced-menu { animation: none; }
