@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { DEFAULT_USER_SETTINGS, storageEngine } from '../src/core/storage/storageEngine';
 import { detectCJKLanguage } from '../src/core/languages/languageRegistry';
 import { parseWebVideoUrl } from '../src/core/media/webVideoParser';
 import {
@@ -253,5 +254,12 @@ describe('LINGUA FLOW — Subtitle Engine, SRT/VTT/ASS & Video Seeking Sync (Sec
     expect(j3Cues).toHaveLength(2);
     expect(j3Cues[0].sourceText).toBe('皆さんこんにちは');
     expect(j3Cues[0].endTimestamp).toBeLessThanOrEqual(j3Cues[1].startTimestamp);
+  });
+});
+
+describe('Giao diện mặc định', () => {
+  it('theo giao diện hệ thống khi chưa có cài đặt', () => {
+    expect(DEFAULT_USER_SETTINGS.themeMode).toBe('system');
+    expect(storageEngine.loadSettings().themeMode).toBe('system');
   });
 });

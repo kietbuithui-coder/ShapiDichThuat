@@ -46,7 +46,7 @@ export const DEFAULT_USER_SETTINGS: UserSettings = {
   saveHistory: true,
   saveTranscript: true,
   saveRawAudio: false, // Never store raw audio by default (Section 8.3 & 30)
-  themeMode: 'light',  // Light Mode default per Section 7.3
+  themeMode: 'system', // Follow the device theme unless the user chooses otherwise
   reduceMotion: false,
   uiScale: 'normal',
   hapticFeedback: true,
